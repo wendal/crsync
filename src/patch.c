@@ -133,7 +133,7 @@ static size_t Range_callback(void *data, size_t size, size_t nmemb, void *userp)
     fwrite(data, size, nmemb, rd->file);
     rd->cb->got += realSize;
     rd->cacheBytes += realSize;
-    int isCancel = crs_callback_patch(rd->basename, rd->cacheBytes, 0, 0);
+    int isCancel = crs_callback_patch(rd->basename, rd->cb->got, 0, 0);
     return (isCancel == 0) ? realSize : 0;
 }
 

@@ -27,7 +27,7 @@
 #define _MD5_H
 
 #define MD5_OUTBYTES 16
-
+#define MD5_PARALLELISM_DEGREE 4
 /* Any 32-bit or wider unsigned integer data type will do */
 typedef unsigned int MD5_u32plus;
 
